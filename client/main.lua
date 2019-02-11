@@ -576,6 +576,7 @@ function OpenShopMenu(elements, restoreCoords, shopCoords)
 			table.insert(spawnedVehicles, vehicle)
 			TaskWarpPedIntoVehicle(playerPed, vehicle, -1)
 			FreezeEntityPosition(vehicle, true)
+			SetModelAsNoLongerNeeded(data.current.model)
 
 			if data.current.livery then
 				SetVehicleModKit(vehicle, 0)
@@ -589,6 +590,7 @@ function OpenShopMenu(elements, restoreCoords, shopCoords)
 		table.insert(spawnedVehicles, vehicle)
 		TaskWarpPedIntoVehicle(playerPed, vehicle, -1)
 		FreezeEntityPosition(vehicle, true)
+		SetModelAsNoLongerNeeded(elements[1].model)
 
 		if elements[1].livery then
 			SetVehicleModKit(vehicle, 0)
